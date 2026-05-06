@@ -47,9 +47,14 @@ jobs:
             - name: Run Python script to check frined-links
               env:
                   PROXY_URL: ${{ secrets.PROXY_URL }}
-                  SOURCE_URL: "link.csv"
+                  SOURCE_URL: "./link.csv"
               run: |
+                  echo "Current directory: $(pwd)"
+                  echo "Files in directory:"
+                  ls -la
                   echo "SOURCE_URL: $SOURCE_URL"
+                  echo "Content of link.csv:"
+                  cat link.csv
                   python main.py
 
             - name: Upload result.json as artifact

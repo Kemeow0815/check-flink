@@ -43,6 +43,7 @@
 - `result.json`: 链接检查结果的输出文件。
 - `link.csv`: 存放待检查链接的文本文件(可选方式之一)。
 - `README.md`: 项目说明文件。
+- `convert_json_to_csv.py`: 自用脚本。
 
 ## 使用说明
 
